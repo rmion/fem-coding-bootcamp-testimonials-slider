@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+  }
+  html, body {
+    padding: 0;
+    min-height: 100%;
+  }
+  body {
+    font-family: Inter, sans-serif;
+    margin: 0 auto;
+  }
+  img {
+    display: block;
+    width: 75%;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 40px 40px -20px hsl(240, 38%, 20%, 20%);
+  }
+  
+  .bg-pattern {
+    padding: 2rem;
+    background: url("./images/pattern-bg.svg") no-repeat center center;
+    background-size: contain;
+  }
+  .controls {
+    text-align: center;
+    margin-top: -20px;
+  }
+  button {
+    border: none;
+    background: white;
+    padding: 1rem;
+    margin: 0;
+  }
+  button:not([disabled]) {
+    cursor: pointer;
+  }
+  button:first-of-type {
+    border-radius: 50px 0 0 50px;
+    margin-right: -5px;
+  }
+  button:last-of-type {
+    border-radius: 0 50px 50px 0;
+  }
+  blockquote {
+    background: url('./images/pattern-quotes.svg') no-repeat top center/20%, 
+                url('./images/pattern-curve.svg') no-repeat bottom left/50%;
+    padding: 4rem;
+    margin-top: 4rem;
+    font-weight: 300;
+  }
+  blockquote > p {
+    color: hsl(240, 38%, 20%);
+    font-size: 1.25rem;
+  }
+  cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+  }
+  cite p:first-of-type {
+    font-weight: 700;
+  }
+  .attribution { margin: 1rem; text-align: center; }
+  .attribution a { color: hsl(240, 38%, 20%); }
+  @media only screen and (min-width: 768px) {
+    body {
+      max-width: 1024px;
+    }
+    html, body, main {
+      height: 90%;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    main > * {
+      flex: 1;
+    }
+    .bg-pattern {
+      flex: 2;
+    }
+    blockquote > p {
+      margin-right: -15rem;
+    }
+    cite > p {
+      display: inline;
+    }
+  }

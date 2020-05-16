@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+</head>
+<body>
+  <main id="app">
+    <div class="bg-pattern">
+      <img  :src="slides[currentSlide].photo" 
+            :alt="slides[currentSlide].name">
+      <p class="controls">
+        <button 
+            @click="currentSlide = 0" 
+            :disabled="currentSlide == 0">
+              <img src="./images/icon-prev.svg" alt="Previous slide">
+        </button>
+        <button 
+            @click="currentSlide = 1" 
+            :disabled="currentSlide == 1">
+              <img src="./images/icon-next.svg" alt="Next slide">
+        </button>
+      </p>  
+    </div>
+    <blockquote>
+      <p><q>{{slides[currentSlide].quote}}</q></p>
+      <cite>
+        <p>{{slides[currentSlide].name}}</p>
+        <p>{{slides[currentSlide].title}}</p>
+      </cite>
+    </blockquote>
+  </main>
+  <footer>
+    <p class="attribution">
+      <small>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://rmion.com">Robert Mion</a>.</small>
+    </p>
+  </footer>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
